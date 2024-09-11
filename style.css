@@ -2,22 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
-body {
+form {
     display: flex;
+    width: 100%;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1rem;
     gap: 1rem;
+    background-image: linear-gradient(45deg, rgb(12, 71, 27), rgb(73, 161, 120), rgb(2, 66, 2));
 }
 
 .chat-display {
     width: 80%;
     height: 80vh;
-    border: 1px solid black;
+    box-shadow: 0 0 0.5rem 0 black;
     padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .input-control {
@@ -30,6 +35,8 @@ body {
 
 input {
     padding: 0.5rem;
+    box-shadow: 0 0 0.5rem 0 black;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 input[type="text"] {
@@ -38,4 +45,13 @@ input[type="text"] {
 
 input[type="submit"] {
     flex: 0.20;
+}
+
+input[type="submit"]:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.message {
+    margin: 0.5rem 0;
 }
