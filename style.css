@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.chat-display {
+    width: 80%;
+    height: 80vh;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.input-control {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+input {
+    padding: 0.5rem;
+}
+
+input[type="text"] {
+    flex: 0.80;
+}
+
+input[type="submit"] {
+    flex: 0.20;
+}
