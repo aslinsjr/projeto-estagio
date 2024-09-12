@@ -23,6 +23,11 @@ form {
     box-shadow: 0 0 0.5rem 0 black;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.7);
+    overflow: scroll;
+}
+
+.chat-display::-webkit-scrollbar {
+    display: none;
 }
 
 .input-control {
