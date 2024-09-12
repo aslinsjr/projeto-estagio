@@ -4,48 +4,34 @@ const menssagemInput = document.querySelector("#message-input")
 
 const submitBtn = document.querySelector("#submit-btn")
 
-function printingUserMessage(mensagem) {
-    const template = `<div class="user message">
-        <p>Usuário: ${mensagem}</p>
-        </div>`
+function printingMessage(message, divClass, author) {
+    const template = `<div class="${divClass} message">
+    <p>${author}: ${message}</p>
+    </div>`
 
     const parser = new DOMParser();
     const htmlTemplate = parser.parseFromString(template, "text/html");
-    const userMessage = htmlTemplate.querySelector(".user")
-    chatDisplay.appendChild(userMessage);
+    const messageDiv = htmlTemplate.querySelector(`.${divClass}`)
+    chatDisplay.appendChild(messageDiv);
+}
+
+function printingUserMessage(mensagem) {
+
+    printingMessage(mensagem, "user", "Usuário")
+
 }
 
 function printingBootReturn(mensagem) {
 
-    let bootMessage
+    let message
 
-    if (mensagem || mensagem === "olá") {
-        bootMessage = "Olá"
+    if (mensagem) {
+        message = "Olá"
     }
 
-    const template = `<div class="boot message">
-        <p>Boot: ${bootMessage}</p>
-        </div>`
+    printingMessage(message, "boot", "Boot")
 
-    const parser = new DOMParser();
-    const htmlTemplate = parser.parseFromString(template, "text/html");
-    const bootMessageDiv = htmlTemplate.querySelector(".boot")
-    chatDisplay.appendChild(bootMessageDiv);
 }
-
-function printingBootMessage() {
-
-    const template = `<div class="boot message">
-        <p>Boot: Como posso ajudar?</p>
-        </div>`
-
-    const parser = new DOMParser();
-    const htmlTemplate = parser.parseFromString(template, "text/html");
-    const bootMessageDiv = htmlTemplate.querySelector(".boot")
-    chatDisplay.appendChild(bootMessageDiv);
-}
-
-
 
 
 menssagemInput.addEventListener("change", (e) => {
@@ -67,7 +53,7 @@ menssagemInput.addEventListener("change", (e) => {
         }, 1000)
 
         setTimeout(() => {
-            printingBootMessage()
+            printingMessage("Como posso ajudar?", "boot", "Boot")
         }, 2000)
 
 

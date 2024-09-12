@@ -14,7 +14,7 @@ form {
     justify-content: center;
     padding: 1rem;
     gap: 1rem;
-    background-image: linear-gradient(45deg, rgb(12, 71, 27), rgb(73, 161, 120), rgb(2, 66, 2));
+    background-image: radial-gradient(closest-side, rgb(2, 48, 13), rgb(117, 182, 152));
 }
 
 .chat-display {
@@ -37,6 +37,11 @@ input {
     padding: 0.5rem;
     box-shadow: 0 0 0.5rem 0 black;
     background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+}
+
+input:focus {
+    outline: none;
 }
 
 input[type="text"] {
@@ -54,4 +59,11 @@ input[type="submit"]:hover {
 
 .message {
     margin: 0.5rem 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    .chat-display {
+        height: 50vh;
+    }
 }
