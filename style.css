@@ -61,6 +61,14 @@ input[type="submit"]:hover {
     margin: 0.5rem 0;
 }
 
+.user {
+    color: rgb(117, 182, 152);
+}
+
+.boot {
+    color: rgb(2, 48, 13);
+}
+
 
 @media screen and (max-width: 600px) {
     .chat-display {
